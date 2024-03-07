@@ -20,7 +20,7 @@ const imageElement = document.querySelector('main picture img');
 nameElement.innerHTML= `<strong>${fullName}</strong>`;
 yearElement.innerHTML = `<strong>${currentYear}</strong>`;
 imageElement.setAttribute("src",profilePicture);
-imageElement.setAttribute("alt", 'Profile image of profilephoto');
+imageElement.setAttribute("alt", 'Profile image of Diego Bellido');
 
 /* Step 5 - Array */
 foodElement.innerHTML = `<strong>${favFoods}</strong>`;
