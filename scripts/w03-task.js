@@ -19,17 +19,17 @@ document.querySelector('#addNumbers').addEventListener("click",addNumbers);
 
 /* Function Expression - Subtract Numbers */
 
-function subtract(number1, number2){
+const subtract = function (number1, number2){
     return number1-number2;
 }
-function subtractNumbers(){
+const subtractNumbers = function (){
     const subtract1 = Number(document.querySelector('#subtract1').value);
     const subtract2 = Number(document.querySelector('#subtract2').value);
 
     document.querySelector('#difference').value = subtract(subtract1,subtract2);
 
 }
-document.querySelector('#subtractNumbers').addEventListener("click",subtractNumbers)
+document.querySelector('#subtractNumbers').addEventListener("click",subtractNumbers);
 
 
 /* Arrow Function - Multiply Numbers */
