@@ -1,0 +1,65 @@
+body{
+    background-color: rgb(88, 88, 199);
+}
+
+#Menu #options{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+#Menu #options li {
+    margin-top: 35px;
+}
+#Menu #options li a {
+    color: white;
+}
+main{
+    background-color: white;
+}
+#Menu{
+    width: 90%;
+    height: 100px;
+    background-color:black;
+    position: relative;
+    margin: auto;  
+    
+}
+h1{
+    color:gold;
+    background-color: red;
+    text-align: center;
+    font-size: 100px;
+    margin: auto;
+}
+
+select{
+    width: 100px;
+    height: 35px;
+}
+option{
+    font-size: 20px;
+}
+
+#listPokemons{
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+#listPokemons article{
+    margin: 15px;
+    
+}
+#listPokemons h4{
+    color: navy;
+    font-size: smaller;
+    text-align: center;
+}
+
+#listPokemons img {
+    width: 250px;
+    height: auto;
+    box-shadow: 0 0 30px #777;
+    margin: .5rem;
+}
+
