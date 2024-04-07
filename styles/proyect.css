@@ -48,6 +48,7 @@ option{
 }
 #listPokemons article{
     margin: 15px;
+    background-color: rgb(156, 205, 214);
     
 }
 #listPokemons h4{
@@ -61,5 +62,20 @@ option{
     height: auto;
     box-shadow: 0 0 30px #777;
     margin: .5rem;
+    border: 2px solid blue;
+}
+
+#pikachu{
+    height: 500px;
+    width: 90%;
+    margin-left: 80px;
+}
+
+h2{
+    color: red;
+}
+
+#choises{
+    background-color: yellow;
 }
 

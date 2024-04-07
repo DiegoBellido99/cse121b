@@ -2,7 +2,6 @@ const PokemonsElements = document.getElementById("listPokemons");
 
 let pokemonArray = [];
 
-/*
 function displayPokemons (generalPokemons){
     generalPokemons.forEach(pokemons=> {
         const article = document.createElement("article");
@@ -11,10 +10,20 @@ function displayPokemons (generalPokemons){
         h4.textContent = pokemons.name;
 
         const img = document.createElement("img");
-        img.setAttribute("src",pokemon[sriptes].frontdefaul);
+        img.setAttribute("src",pokemons.sprites.front_default);
+        img.setAttribute("alt",pokemons.name);
+        
+        const h3 = document.createElement("h3");
+        h3.textContent= `Weight : ${pokemons.weight}`;
+
+        article.appendChild(h4);
+        article.appendChild(img);
+        article.appendChild(h3);
+
+        PokemonsElements.appendChild(article);
     });
 }
-*/
+
 
     
 
@@ -41,6 +50,8 @@ async function getPokemonData() {
     .then(pokemonArray => {
         console.log('Pokémon array:', pokemonArray);
         printPokemonNames();
+        
+        
 
     })
     .catch(error => {
@@ -52,9 +63,57 @@ async function getPokemonData() {
 
 function printPokemonNames(){
     pokemonArray.forEach((pokemon)=>{
-        console.log(pokemon.name);
+        let movimeintos = pokemon.moves;
+        movimeintos.forEach(element => {
+            console.log(element.move.name)
+        });
+        
+        
     });
 }
 
-printPokemonNames();
 
+const reset = ()=>{
+    PokemonsElements.innerHTML= "";
+};
+
+
+const filterPokemons = (pokemones)=>{
+
+    reset();
+
+    const choices = document.getElementById("choises").value;
+
+    switch(choices){
+        case "grass":
+            displayPokemons(pokemones.filter(pokemo=>pokemo.types[0].type.name ==='grass'));
+            break;
+        
+        case "fire":
+            displayPokemons(pokemones.filter(pokemo=>pokemo.types[0].type.name ==='fire'));
+            break;
+        
+        case "water":
+            displayPokemons(pokemones.filter(pokemo=>pokemo.types[0].type.name ==='water'));
+            break;
+        
+        case "bug":
+            displayPokemons(pokemones.filter(pokemo=>pokemo.types[0].type.name ==='bug'));
+            break;
+        
+        case "normal":
+            displayPokemons(pokemones.filter(pokemo=>pokemo.types[0].type.name ==='normal'));
+            break;
+        
+        case "all":
+            displayPokemons(pokemones);
+            break;
+        
+        default:
+            break;
+    }
+}
+
+document.getElementById("choises").addEventListener("change",()=>{filterPokemons(pokemonArray)});
+
+getPokemonData();
