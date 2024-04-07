@@ -53,8 +53,9 @@ option{
 }
 #listPokemons h4{
     color: navy;
-    font-size: smaller;
+    font-size: xx-large;
     text-align: center;
+
 }
 
 #listPokemons img {
@@ -73,6 +74,14 @@ option{
 
 h2{
     color: red;
+}
+h3{
+    color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li{
+    color: blue;
 }
 
 #choises{

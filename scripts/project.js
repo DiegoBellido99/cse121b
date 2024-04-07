@@ -16,9 +16,25 @@ function displayPokemons (generalPokemons){
         const h3 = document.createElement("h3");
         h3.textContent= `Weight : ${pokemons.weight}`;
 
+        const h2 = document.createElement("h2");
+        h2.textContent = `Movements : `;
+
+        const ul = document.createElement("ul");
+
+        const movimientosArray= pokemons.moves;
+
+        for(i=0 ;i< 4 ;i++){
+            const li = document.createElement("li");
+
+            li.textContent= movimientosArray[i].move.name;
+            ul.appendChild(li);
+        }
+
         article.appendChild(h4);
         article.appendChild(img);
         article.appendChild(h3);
+        article.appendChild(h2);
+        article.appendChild(ul);
 
         PokemonsElements.appendChild(article);
     });
